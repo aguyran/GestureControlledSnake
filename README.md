@@ -1,6 +1,7 @@
 # GestureControlledSnake
-A ml5 mobilenet based classifier controlled snake Game, where the user can give pictures of objects or anything as a mean to control the game
-It has 4 direction which can be trained by the steps below
+A ml5 mobilenet based classifier controlled snake game, where the user can give pictures of objects or anything(hands)etc, as a mean to control the game.
+
+It has 4 directions which can be trained individually. 
 
 ## To use it/run it 
 ### 1. Simply clone and start index.html and wait for model to load
