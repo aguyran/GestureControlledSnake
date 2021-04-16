@@ -1,0 +1,51 @@
+*{
+    box-sizing: border-box;
+    font-family:'Open Sans',sans-serif;
+
+}
+body{
+    background-color: #111;
+    color: white;
+}
+nav{
+    display:flex;
+}
+h1{
+    font-family: 'Dancing Script', cursive;
+}
+
+    
+a{
+    color:white;
+    text-decoration: none;
+    transition: all 0.5s ease 0s; 
+}
+a:hover{
+    transform:scale(1.2);
+    text-decoration: underline;
+    transition: all 0.3s ease 0s; 
+}
+h1,p,div{
+    text-align: center;
+}
+button{
+    background-color: #FF9A8B;
+    background-image: linear-gradient(90deg, #FF9A8B 0%, #FF6A88 55%, #FF99AC 100%);
+        
+
+margin:0px 10px;
+padding:10px 20px;
+border:none;
+border-radius:10px;
+color:white;
+transition: all 0.6s ease 0s; 
+}
+button:hover{
+    background-color: #FFE53B;
+background-image: linear-gradient(147deg, #FFE53B 0%, #FF2525 74%);
+cursor:pointer;
+transform:scale(1.2);
+transition: all 0.3s ease 0s;    
+    
+
+}
