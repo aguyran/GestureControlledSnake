@@ -1,5 +1,6 @@
 # Gesture Controlled Snake Game
 ![example](/forReadme/snakeexample.gif)
+
 A ml5 mobilenet based classifier controlled snake game, where the user can give pictures of objects or anything(hands)etc, as a mean to control the game.
 
 It has 4 directions which can be trained individually. 
