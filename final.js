@@ -94,8 +94,8 @@ px = Player X, py = Player Y
 gs = Grid Size,tc = Tile Count
 ax = Apple X, Apple Y
 Trail Stores Previous Position Upto Tail Size*/
-/*Snake Game attributed to https://www.youtube.com/watch?v=xGmXxpIj6vs
-with some modifications for controls with CNN*/
+/*Snake Game base attributed to https://www.youtube.com/watch?v=xGmXxpIj6vs
+with some modifications for controls with CNN and Score*/
 px=py=10;
 gs=tc=20;//20*20 = 400size
 ax=ay=15;
