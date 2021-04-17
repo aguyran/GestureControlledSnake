@@ -1,6 +1,4 @@
----
-permalink: /index.html
----
+
 # Gesture Controlled Snake Game
 ![example](/forReadme/snakeexample.gif)
 
