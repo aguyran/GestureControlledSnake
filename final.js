@@ -6,6 +6,7 @@ let noOfUpImages=0;
 let noOfDownImages=0;
 let noOfLeftImages=0;
 let noOfRightImages=0;
+let Score =0;
 let videoElement=document.getElementById("videoElement");
 let canv=document.getElementById("random");
 ctx=canv.getContext("2d");
@@ -118,7 +119,9 @@ function game() {
     }
     ctx.fillStyle="black";
     ctx.fillRect(0,0,canv.width,canv.height);
- 
+    ctx.font = "20px Arial";
+    ctx.fillStyle="white";
+    ctx.fillText("Score: "+Score,5,20);
     ctx.fillStyle="lime";
     for(var i=0;i<trail.length;i++) {
         ctx.fillRect(trail[i].x*gs,trail[i].y*gs,gs-2,gs-2);
@@ -135,6 +138,7 @@ function game() {
         tail++;
         ax=Math.floor(Math.random()*tc);
         ay=Math.floor(Math.random()*tc);
+        Score++;
     }
     ctx.fillStyle="red";
     ctx.fillRect(ax*gs,ay*gs,gs-2,gs-2);
