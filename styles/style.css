@@ -13,8 +13,14 @@ nav{
 h1{
     font-family: 'Dancing Script', cursive;
 }
-
-    
+#videoElement{
+    width:60%;
+    height:auto;
+}
+#random{
+    width:50%;
+    height:auto;
+}
 a{
     color:white;
     text-decoration: none;
@@ -33,7 +39,7 @@ button{
     background-image: linear-gradient(90deg, #FF9A8B 0%, #FF6A88 55%, #FF99AC 100%);
         
 
-margin:0px 10px;
+margin:10px 10px;
 padding:10px 20px;
 border:none;
 border-radius:10px;
@@ -49,3 +55,18 @@ transition: all 0.3s ease 0s;
     
 
 }
+.buttons{
+    width:100%;
+    display:flex;
+    justify-content: center;
+    flex-wrap:wrap;
+}
+@media only screen and (max-width: 600px) {
+    #videoElement{
+        width:90%;
+        height:auto;
+    }
+    #random{
+        width:90%;
+        height:auto;
+    }}

@@ -12,18 +12,18 @@ let canv=document.getElementById("random");
 ctx=canv.getContext("2d");
 setInterval(game,1000/15);
 
-numClasses=4;
-numLabels=4;
+let numClasses=4;
+let numLabels=4;
 
 navigator.mediaDevices.getUserMedia({ video: true, audio: false })
 .then(function(stream) {
     videoElement.srcObject = stream;
     videoElement.play();
-    mobilenet = ml5.featureExtractor('MobileNet', modelReady);
-    mobilenet.numClasses=numClasses;
-    mobilenet.numLabels=numLabels;
+    mobilenet = ml5.featureExtractor('MobileNet',{numClasses:4,numLabels:4}, modelReady);
+    // mobilenet.numClasses=numClasses;
+    // mobilenet.numLabels=numLabels;
     console.log(mobilenet);
-    classifier = mobilenet.classification(videoElement, videoReady);
+    classifier = mobilenet.classification(videoElement,4, videoReady);
     
 })
 .catch(function(err) {
@@ -54,10 +54,11 @@ function gotResults(error, result) {
 if (error) {
     console.error(error);
 } else {
-    direction = result;
+    direction = result[0].label;
     
     console.log(direction);
     keyPresses();
+    
     classifier.classify(gotResults);
    
 }
@@ -119,9 +120,9 @@ function game() {
     }
     ctx.fillStyle="black";
     ctx.fillRect(0,0,canv.width,canv.height);
-    ctx.font = "20px Arial";
+    ctx.font = "2em Arial";
     ctx.fillStyle="white";
-    ctx.fillText("Score: "+Score,5,20);
+    ctx.fillText("Score: "+Score,5,40);
     ctx.fillStyle="lime";
     for(var i=0;i<trail.length;i++) {
         ctx.fillRect(trail[i].x*gs,trail[i].y*gs,gs-2,gs-2);
