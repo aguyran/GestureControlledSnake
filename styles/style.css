@@ -61,6 +61,27 @@ transition: all 0.3s ease 0s;
     justify-content: center;
     flex-wrap:wrap;
 }
+.loader-frame{
+    display:none;
+  }
+.loader-frame.active{
+  display:inline-block;
+}
+
+.loader {
+
+  border: 0.2em solid #332929; 
+  border-top: 0.2em solid #FF6A88; 
+  border-radius: 50%;
+  width: 4em;
+  height: 4em;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
 @media only screen and (max-width: 600px) {
     #videoElement{
         width:90%;

@@ -43,6 +43,7 @@ function videoReady() {
 
 function whileTraining(loss) {
 if (loss == null) {
+    document.getElementById("loading-sprite").classList.remove("active");
     console.log('Training Complete');
     classifier.classify(gotResults);
 } else {
@@ -63,8 +64,6 @@ if (error) {
    
 }
 }
-
-
 
 function upDir(){
     noOfUpImages++;
@@ -88,6 +87,7 @@ function rightDir(){
     document.getElementById("rightBtn").innerHTML= "Right "+noOfRightImages;
 }
 function trainmdl(){
+    document.getElementById("loading-sprite").classList.add("active");
     classifier.train(whileTraining);
 }
 /*xv = X Velocity,yv = Y Velocity
